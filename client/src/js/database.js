@@ -42,6 +42,8 @@ export const getDb = async () => {
   // return the content
   const res = await req;
   console.log(res);
+  // thanks scott Casey for the help
+  return result?.[0].value;
 };
 
 initdb();
