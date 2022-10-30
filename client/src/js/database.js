@@ -40,8 +40,9 @@ export const getDb = async () => {
   // get all the content from the object store
   const req = objStore.getAll();
   // return the content
-  const res = await req;
-  console.log(res);  
+  const result = await req;
+    // thanks scott Casey for the help
+  return result?.[0]?.value;
 };
 
 initdb();
